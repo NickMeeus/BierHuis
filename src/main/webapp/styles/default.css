@@ -1,0 +1,111 @@
+/* NORMALIZE */
+
+html, body, div, section, article, aside, nav {
+ margin:0;
+ padding:0;
+}
+table{
+ border-collapse:collapse;
+ border-spacing: 0;
+ empty-cells:hide;
+ }
+tr,td {
+ margin:0;
+ padding:0;
+ } 
+
+
+/* GENERAL */
+body {
+	background: #FCE15F;
+	font-family: sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	width:60%;
+}
+input {
+	display: block;
+}
+span {
+	color: red;
+}
+
+
+/* MENU */
+nav {
+	display: block;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+}
+nav h1 {
+	padding-top: 0.2em;
+	text-align: center;
+	color: #FCE15F;
+	font-family: sans-serif;
+	font-size: 2em;
+}
+.wegPadding {
+	padding-left: 0em;
+}
+.wegPadding li {
+	display: inline-block;
+	margin-right: 0.5em;
+	text-align: center;
+}
+
+
+/* BROUWERS */
+.opmaakLi {
+	list-style: none;
+	
+}
+.opmaakLi:nth-child(odd) {
+	background-color: #BEBDBA;
+	
+}
+.opmaakLi:nth-child(even) {
+	background-color: #C5AD56;
+}
+.opmaakLi a {
+	text-decoration: none;
+	color: black;
+}
+.naastElkaar {
+	padding-left: 0em;
+}
+
+/* BIER */
+.formFormatting p {
+	margin: 0em;
+}
+.formFormatting h4 {
+	margin-bottom: 0em;
+	margin-top: 0.5em;
+}
+
+/* WINKELWAGEN */
+.opmaakTr:nth-child(odd) {
+	background-color: #BEBDBA;
+	
+}
+.opmaakTr:nth-child(even) {
+	background-color: #C5AD56;
+}
+.tekstRechts {
+	text-align: right;
+}
+#vetteTekst {
+	font-weight: bold;	
+}
+.geenPijltjes {
+  -moz-appearance:textfield;
+}
+.geenPijltjes::-webkit-outer-spin-button,
+.geenPijltjes::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#marginOnder {
+	margin-bottom: 0.5em;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/bierhuis">
+	<Resource name="jdbc/bierhuis" type="javax.sql.DataSource"
+		username="cursist" password="cursist" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/bierhuis" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		validationInterval="60000" testOnBorrow="true" validationQuery="select 1" />
+</Context>
