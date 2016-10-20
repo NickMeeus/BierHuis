@@ -60,19 +60,18 @@ class MandjeImpl implements Mandje, Serializable {
 	@Override
 	public Set<Bestelbonlijn> getbestelbonlijnen() {
 		Set<Bestelbonlijn> bestelbonlijnen = new HashSet<>();
-		for (Long bierId : mandje.keySet()) {
-			bestelbonlijnen.add(new Bestelbonlijn(bierService.read(bierId), mandje.get(bierId)));
-		}
+		// for lus aangepast naar Lambda
+		mandje.keySet().stream().forEach(
+				bierId -> bestelbonlijnen.add(new Bestelbonlijn(bierService.read(bierId), mandje.get(bierId))));
 		return bestelbonlijnen;
 	}
 
 	@Override
 	public BigDecimal getTotaalprijs() {
-		BigDecimal totaalprijs = BigDecimal.ZERO;
-		for (Bestelbonlijn bestelbonlijn : getbestelbonlijnen()) {
-			totaalprijs = totaalprijs
-					.add(bestelbonlijn.getBier().getPrijs().multiply(new BigDecimal(bestelbonlijn.getAantal())));
-		}
+		final BigDecimal totaalprijs = BigDecimal.ZERO;
+		// for lus aangepast naar Lambda
+		getbestelbonlijnen().stream().forEach(bestelbonlijn -> totaalprijs.add(bestelbonlijn.getBier().getPrijs().multiply(new BigDecimal(bestelbonlijn.getAantal()))));
+		
 		return totaalprijs;
 	}
 
